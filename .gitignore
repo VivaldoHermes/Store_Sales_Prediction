@@ -1,0 +1,3 @@
+/diretorio-a-ignorar/ 
+*.pdf
+.ipynb_checkpoints
