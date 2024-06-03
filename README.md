@@ -42,7 +42,7 @@ Para a construção da solução, foram consideradas as seguintes premissas:
 # 3. Estratégia da Solução
 Para fazer a entrega da primeira solução de maneira o mais rápido possível, entregando valor para a empresa e possibilitando que o CFO tome decisões com mais agilidade, foi utilizado o método CRISP-DS
 
-![](img/crisp_ds.png)
+![](images/crisp_ds.png)
 
 O método CRISP-DS consiste em 9 passos ciclicos, onde a cada iteração dos nove passos, o resultado de negócio vai sendo aperfeiçoado, visando entregas cada vez mais rápidas e cada vez com mais qualidade e acertivas, possibilitando assim que as equipes que irão utilizar os resultados desenvolvidos tenham um produto um produto minimamente utilizável na primeira entrega e que é aperfeiçoado ao longo do tempo.
 
@@ -75,7 +75,7 @@ Para criar a solução, foram utilizadas as seguintes ferramentas:
 # 4. Top 3 Insights
 Foi criado um Mindmap para ajudar na construção de Hipóteses, a fim de facilitar e delimitar o escopo da etapa de análise exploratória.
 
-![](/img/mind_map_hypothesis.png)
+![](/images/mind_map_hypothesis.png)
 
 Através desse Mindmap, foram geradas 19 hipóteses de negócio, das quais 12 foram escolhidas para serem validadas, confirmando assim  premissas da equipe de negócios e do dono do problema, além da geração de insights para ambos.
 
@@ -84,18 +84,18 @@ Dessas 12 hipóteses verificadas, os 3 principais insights gerados foram:
 ## Insight 1: Lojas Abertas durante o feriado de Natal deveriam vender mais
 **Hipótese Falsa:** Lojas que ficam abertas durante o feriado de natal não vendem mais em comparação a outros feriados
 
-![](img/hip_1.png)
+![](images/hip_1.png)
 
 
 ## Insight 2: Lojas Deveriam vender mais depois do dia 10 de cada mês
 **Hipótese Verdadeira:** Lojas realmente vendem mais depois do dia 10 de cada mês
 
-![](img/hip_2.png)
+![](images/hip_2.png)
 
 ## Insight 3: Lojas deveriam vender mais no segundo semestre do ano
 **Hipótese Falsa:** Lojas vendem MENOS no segundo semestre do ano
 
-![](img/hip_3.png)
+![](images/hip_3.png)
 
 # 5. Modelos de Machine Learning
 Para o primeiro ciclo do projeto foram selecionados 5 algoritmos para teste, a fim de escolher o algoritmo que tivesse a melhor perfomance e o melhor custo de implementação. Foi optado pela simplicidade nessa etapa inicial, visto que era o primeiro ciclo do projeto e o objetivo principal era entregar uma solução que fosse mínimamente utilizável para a equipe de negócios e pelo CFO.
@@ -130,7 +130,7 @@ Após os testes inicias, obtivemos os seguintes resultados:
 ## 6.3. Métricas dos Algoritmos - *Cross Validation*
 Após os testes com os algoritmos selecionados, foi utilizado a técnica de ***Cross Validation*** para validar os resultados e garantir a performance real de cada uma dos modelo utilizados. Como o problema se tratava de um série temporal, foi utilizada a técnica de ***Cross Validation*** específica para esse problema, respeitando assim a linha do tempo no treinamento dos algoritmos.
 
-![](img/cross_validation.png)
+![](images/cross_validation.png)
 
 Com esse método de validação, foram obtidas as seguintes performances:
 
@@ -171,7 +171,7 @@ Como podemos observar nos dois primeiro gráficos abaixo, o modelo selecionado o
 
 Já nos dois últimos gráficos, podemos observar uma distribuição normal a cerca das previsões, o que nos inidica um bom resultado do modelo selecionado, além de podermos verificar a distribuição dos erros do modelo.
 
-![](img/performance.png)
+![](images/performance.png)
 
 # 7. Resultado de Negócio
 Com o modelo selecionado e treinado, obtivemos a seguinte performance de negócio para as 5 melhores lojas:
@@ -206,7 +206,7 @@ Como resultado final, temos os seguintes cenários:
 | Melhor Cenário | \$ 286,644,307.44 |
 
 ## 7.1. Distribuição das Previsões por Loja
-![](/img/business_performance.png)
+![](/images/business_performance.png)
 
 
 # 8. Conclusões
