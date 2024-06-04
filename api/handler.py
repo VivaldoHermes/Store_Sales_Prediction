@@ -1,3 +1,4 @@
+import os
 import pickle
 import pandas as pd
 from flask import Flask, request, Response
@@ -5,7 +6,8 @@ from rossmann.Rossmann import Rossmann
 # loading model
 # initialize API
 app = Flask( __name__ )
-model = pickle.load( open( "C:/Users/Vivaldo Hermes/Desktop/01_DS_Producao/model/model_rossmann.pkl", "rb") )
+model = pickle.load( open ("D:/VivaldoSHermes/Cursos/Comunidade DS/Repos/DS_Projetos/Store_Sales_Prediction/model/model_rossmann.pkl", "rb") ) #versão local
+#model = pickle.load( open ("model/model_rossmann.pkl", "rb") ) #versão web
 @app.route( "/rossmann/predict", methods=["POST"] )
 
 def rossmann_predict():
@@ -29,4 +31,6 @@ def rossmann_predict():
     else:
         return Reponse( "{}", status=200, mimetype="application/json" )
 if __name__ == "__main__":
-    app.run( "0.0.0.0" )
+    #port = os.environ.get ("PORT", 5000) #apenas para versão web
+    app.run( "0.0.0.0" ) #versão local
+    #app.run( "0.0.0.0", port=port) #versão web
