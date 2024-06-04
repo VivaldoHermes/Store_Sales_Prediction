@@ -29,7 +29,8 @@ def rossmann_predict():
             df_response = pipeline.get_prediction( model, test_raw, df3 )
         return df_response
     else:
-        return Reponse( "{}", status=200, mimetype="application/json" )
+        return Response( "{}", status=200, mimetype="application/json" )
+
 if __name__ == "__main__":
     #port = os.environ.get ("PORT", 5000) #apenas para versão web
     app.run( "0.0.0.0" ) #versão local
