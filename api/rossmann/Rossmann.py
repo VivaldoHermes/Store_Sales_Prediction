@@ -6,9 +6,8 @@ import math
 import datetime
 
 class Rossmann( object ):
-    def __init__( self ):        
-        self.home_path="D:/VivaldoSHermes/Cursos/Comunidade DS/Repos/DS_Projetos/Store_Sales_Prediction" #versao local
-        #self.home_path="" #versão web
+    def __init__( self ):
+        self.home_path="D:/VivaldoSHermes/Cursos/Comunidade DS/Repos/DS_Projetos/Store_Sales_Prediction"
         self.competition_distance_scaler = pickle.load( open( self.home_path + "/parameter/competition_distance_scaler.pkl", "rb") )
         self.competition_time_month_scaler = pickle.load( open( self.home_path + "/parameter/competition_time_month_scaler.pkl", "rb") )
         self.promo_time_week_scaler = pickle.load( open( self.home_path + "/parameter/promo_time_week_scaler.pkl", "rb") )
@@ -57,8 +56,8 @@ class Rossmann( object ):
         df2["month"] = df2["date"].dt.month
         # day
         df2["day"] = df2["date"].dt.day
-        # week of year
-        df2["week_of_year"] = df2["date"].dt.weekofyear
+        # week of year        
+        df2["week_of_year"] = df2["date"].dt.isocalendar().week
         # year week
         df2["year_week"] = df2["date"].dt.strftime( "%Y-%W" )
         # competition since
